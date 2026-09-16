@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Students List</h2>
+
+<form method = 'POST'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+</form> 
+
+
+
+{% comment %} Model Forms {% endcomment %}
+
+
+
+{% comment %} 
+    CSRF PROTECTION ( Cross site reqeust forgery )
+{% endcomment %}
+
+
+
+{% comment %} 
+    <ul>
+        {% for student in student_name%}
+            <li>{{student}}</li>
+        {% endfor %}
+    </ul> {% endcomment %}
+
+
+
+    {% comment %} <p>{{student_name | upper }}</p>
+    <p>{{student_name | lower }}</p>
+    <p>{{student_list | length }}</p> {% endcomment %}
+
+
+   
+    {% comment %} {% if marks >= 50 %}
+        <p> Congrats {{student_name}}</p>
+    {% else %}
+        <p> Loss {{student_name }}</p>
+    {% endif %} {% endcomment %}
+
+
+</body>
+</html>
+
